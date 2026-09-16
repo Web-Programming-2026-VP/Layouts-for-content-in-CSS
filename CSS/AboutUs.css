@@ -1,0 +1,68 @@
+/*this page's color pallet was taken from the website coolers.com- a 
+color pallet generator*/
+
+body {
+    background-color: #CED3DC;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title{
+    color:#5B616A;
+    border-color: #275DAD;
+    border-style: groove;
+    border-radius: 7px;
+}
+
+.sub-title{
+    color:#5B616A;
+    font-weight: bolder;
+}
+
+.about-body{
+   border-color: #275DAD;
+    border-style: groove;
+    border-radius: 7px; 
+}
+
+.about-photo{
+    border-color: #ABA9C3;
+    border-style: double;
+    border-radius: 5px; /* I learned that this attribute alone can adjust the images size if no border is present*/ 
+    border-width: 8px;
+    width: 200px;
+    height: 200px;
+    /* these two below allows the image to be in thr center of the page*/
+    display: block;
+    margin: auto;
+}
+
+.social-link{
+    position:relative;
+    bottom: 0;
+}
+
+.social-icon{
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Turn the nav list into a plain row of links */
+nav ul{
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a{
+    color: #275DAD;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Underline the nav link being hovered */
+nav a:hover{
+    text-decoration: underline;
+}

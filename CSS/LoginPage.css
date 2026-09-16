@@ -1,0 +1,98 @@
+/* Login page styles */
+
+/* Color palette brought over from Main.css */
+:root {
+	--charcoal-blue: #313E50;
+	--twilight-indigo: #3A435E;
+	--slate-grey: #6C6F7F;
+
+	/* Friendly names so the colors are easy to reuse */
+	--color-dark: var(--charcoal-blue);
+	--color-medium: var(--twilight-indigo);
+	--color-light: var(--slate-grey);
+	--color-text: #FFFFFF;
+}
+
+/* Make padding and borders count inside an element's width */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+
+	/* Flexbox centers the content both ways on the screen */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Darkest palette color with white text on top */
+	background-color: var(--color-dark);
+	color: var(--color-text);
+	font-family: Arial, sans-serif;
+}
+
+main {
+	/* Column direction puts the heading above the card */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+
+	/* Cap the width so the card stays a nice size */
+	width: 100%;
+	max-width: 400px;
+	padding: 1rem;
+}
+
+h1 {
+	margin: 0;
+}
+
+/* The card that holds the form */
+.login-container {
+	width: 100%;
+	padding: 2rem;
+	background-color: var(--color-medium);
+	border-radius: 8px;
+}
+
+.login-fields {
+	/* Stack the labels, inputs, and button with even spacing */
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+label {
+	font-weight: 600;
+}
+
+input {
+	padding: 0.75rem;
+	border: 1px solid var(--color-light);
+	border-radius: 4px;
+
+	/* Match the font used by the rest of the page */
+	font: inherit;
+}
+
+.login-button {
+	margin-top: 1rem;
+	padding: 0.75rem;
+	border-radius: 4px;
+
+	/* It is a link, so strip the underline and center the text */
+	text-align: center;
+	text-decoration: none;
+
+	/* Light palette color with white text */
+	background-color: var(--color-light);
+	color: var(--color-text);
+}
+
+/* Darken the button on hover */
+.login-button:hover {
+	background-color: var(--color-dark);
+}

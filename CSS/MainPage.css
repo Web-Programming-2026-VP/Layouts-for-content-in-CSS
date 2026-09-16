@@ -1,0 +1,112 @@
+/* Main page styles */
+
+/* Color palette for the whole site */
+:root {
+	--charcoal-blue: #313E50;
+	--twilight-indigo: #3A435E;
+	--slate-grey: #6C6F7F;
+
+	/* Friendly names so the colors are easy to reuse */
+	--color-dark: var(--charcoal-blue);
+	--color-medium: var(--twilight-indigo);
+	--color-light: var(--slate-grey);
+	--color-text: #FFFFFF;
+}
+
+/* Make padding and borders count inside an element's width */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 1rem;
+
+	/* Darkest palette color with white text on top */
+	background-color: var(--color-dark);
+	color: var(--color-text);
+	font-family: Arial, sans-serif;
+}
+
+header {
+	padding: 1rem;
+	background-color: var(--color-medium);
+	border-radius: 8px;
+}
+
+/* Turn the nav list into a plain row of links */
+nav ul {
+	display: flex;
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav a {
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+/* Underline the nav link being hovered */
+nav a:hover {
+	text-decoration: underline;
+}
+
+.profile {
+	margin-top: 1rem;
+	padding: 1rem;
+	background-color: var(--color-medium);
+	border-radius: 8px;
+
+	/* Contain the floated photo so it does not spill out of the box */
+	overflow: auto;
+}
+
+/* Float pulls the photo to the left and wraps the text around it */
+.profile-photo {
+	float: left;
+	width: 120px;
+	height: 120px;
+	margin-right: 1rem;
+
+	/* Center the placeholder word inside the square */
+	background-color: var(--color-light);
+	line-height: 120px;
+	text-align: center;
+}
+
+.properties {
+	margin-top: 1rem;
+}
+
+/* Grid lays the cards out in rows that wrap on their own */
+.property-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+}
+
+.property-card {
+	padding: 1rem;
+	background-color: var(--color-medium);
+	border-radius: 8px;
+
+	/* Thin accent line so each card reads as its own block */
+	border-left: 4px solid var(--color-light);
+}
+
+/* Tighten up the text inside a card */
+.property-card h3 {
+	margin: 0 0 0.5rem;
+}
+
+.property-card p {
+	margin: 0.25rem 0;
+}
+
+footer {
+	margin-top: 1rem;
+	text-align: center;
+	color: var(--color-light);
+}
